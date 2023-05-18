@@ -98,8 +98,6 @@ class PairsTrading(QCAlgorithm):
                 self.trading_pairs.pop(pair)
                 index = self.pairs.index([pair.x.Symbol.Value,pair.y.Symbol.Value])
 
-                self.second_trade[self.pairs.index([pair.x.Symbol.Value,pair.y.Symbol.Value])] = 0
-
                 self.Debug(f'Close {pair.Name}, {z_score}')
 
         for pair in self.pair_list:
